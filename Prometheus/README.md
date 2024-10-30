@@ -32,6 +32,18 @@
  Прикрепите к файлу README.md скриншот systemctl status prometheus, где будет написано: prometheus.service — Prometheus Service Netology Lesson 9.4 — [Ваши ФИО]
 
 ## Решение
+1.Создаю пользователя prometheus, скачиваю архив из github, распавовываю его
+```
+sudo useradd --no-create-home --shell /bin/false prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v2.55.0/prometheus-2.55.0.windows-arm64.tar.gz
+tar xvfz prometheus-2.55.0.windows-arm64.tar.gz
+cd prometheus-2.55.0.windows-arm64/
+```
+2. Создаю каталоги для файлов prometheus
+```
+sudo mkdir /etc/prometheus
+sudo mkdir /var/lib/prometheus
+```
 
 ## Задание 2
 Установите Node Exporter.
