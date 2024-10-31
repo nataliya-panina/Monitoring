@@ -43,7 +43,7 @@ sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promto
 sudo /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/ \
 --web.console.templates=/etc/prometheus/consoles/ --web.console.libraries=/etc/prometheus/console_libraries/
 ```
-В браузере открываю IP:9090
+В браузере открываю <IP_address>:9090
 ![image](https://github.com/user-attachments/assets/9c85cdfe-08e8-4222-bb9a-41f08cfcaa2b)
 
 4. Создаю файл сервиса prometheus по пути /etc/systemd/system/prometheus.service
@@ -70,10 +70,10 @@ sudo systemctl status prometheus
 Здесь может возникнуть проблема с правами доступа к каталогу /var/lib/prometheus, чтобы её устранить, нужно поменять владельца папки на prometheus:prometheus
 
 ```
-sudo chown prometheus:prometheus /var/lib/prometheus
+sudo chown prometheus:prometheus /var/lib/prometheus/*
 ```
 ![image](https://github.com/user-attachments/assets/332a23f4-e580-470c-8fcd-97dd6d3c3d45)
-
+---
 ## Задание 2
 Установите Node Exporter.
 
