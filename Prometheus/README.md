@@ -210,6 +210,7 @@ sudo systemctl start grafana-server.service
 sudo systemctl status grafana-server.service
 ```
 ![image](https://github.com/user-attachments/assets/05da8596-c89e-4c10-95e9-897e44628f6c)
+![image](https://github.com/user-attachments/assets/71a5cf30-c895-4a5a-970a-5347325371e9)
 
 
 ------
