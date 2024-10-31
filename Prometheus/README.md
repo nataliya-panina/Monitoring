@@ -86,6 +86,28 @@ sudo chown prometheus:prometheus /var/lib/prometheus/*
  Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]
  
 ## Решение
+```
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
+
+tar xvfz node_exporter-1.8.2.linux-amd64.tar.gz
+
+cd node_exporter-1.8.2.linux-amd64
+moi@ubu:~/node_exporter-1.8.2.linux-amd64$ ll
+total 20048
+drwxr-xr-x  2 moi moi     4096 juil. 14 13:58 ./
+drwxr-x--- 33 moi moi     4096 oct.  31 12:19 ../
+-rw-r--r--  1 moi moi    11357 juil. 14 13:57 LICENSE
+-rwxr-xr-x  1 moi moi 20500541 juil. 14 13:54 node_exporter*
+-rw-r--r--  1 moi moi      463 juil. 14 13:57 NOTICE
+ ./node_exporter
+```
+![image](https://github.com/user-attachments/assets/e6a0e5da-b30b-4791-bf08-526336e9702f)
+
+```
+
+```
+
+
 
 ## Задание 3
 Подключите Node Exporter к серверу Prometheus.
