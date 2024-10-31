@@ -222,7 +222,7 @@ sudo systemctl status grafana-server.service
 
 ![image](https://github.com/user-attachments/assets/e9735ff0-1b70-4bb3-baee-760d0d7db74c)
 
-2. Импорт Дашборда с сайта grafana:
+2. Импорт Дашборда с сайта grafana (по номеру 1860):
 
 ![image](https://github.com/user-attachments/assets/cf02f2b2-ce7a-48aa-b0d8-e9898cecbb92)  
 
