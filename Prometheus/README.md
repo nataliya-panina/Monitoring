@@ -38,11 +38,14 @@ sudo mv ./prometheus.yml /etc/prometheus
 sudo chown prometheus:prometheus /etc/prometheus /var/lib/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
 ```
-3. Запускаю prometheus
+3. Проверяю работоспособность prometheus
 ```
 sudo /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/ \
 --web.console.templates=/etc/prometheus/consoles/ --web.console.libraries=/etc/prometheus/console_libraries/
 ```
+В браузере открываю IP:9090
+![image](https://github.com/user-attachments/assets/9c85cdfe-08e8-4222-bb9a-41f08cfcaa2b)
+
 4. Создаю файл сервиса prometheus по пути /etc/systemd/system/prometheus.service
 ```
 [Unit]
