@@ -218,3 +218,14 @@ sudo systemctl status grafana-server.service
 Интегрируйте Grafana и Prometheus.
 
 ## Решение
+1. Добавление prometheus в качестве источника данных:
+
+![image](https://github.com/user-attachments/assets/e9735ff0-1b70-4bb3-baee-760d0d7db74c)
+
+2. Импорт Дашборда с сайта grafana:
+
+![image](https://github.com/user-attachments/assets/cf02f2b2-ce7a-48aa-b0d8-e9898cecbb92)  
+
+4. Вид дашборда с данными из prometheus:
+
+![image](https://github.com/user-attachments/assets/21423a48-6881-40bc-a901-c9e289ecc764)
