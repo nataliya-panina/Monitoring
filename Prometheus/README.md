@@ -87,7 +87,8 @@ sudo chown prometheus:prometheus /var/lib/prometheus/*
 - Проверьте что node exporter запускается, останавливается, перезапускается и отображает статус с помощью systemctl
 ### Требования к результату
  Прикрепите к файлу README.md скриншот systemctl status node-exporter, где будет написано: node-exporter.service — Node Exporter Netology Lesson 9.4 — [Ваши ФИО]
- 
+
+---
 ## Решение
 1. Скачиваю, извлекаю из архива, запускаю бинарный файл, проверяю через браузер:
 ```
@@ -150,8 +151,9 @@ sudo systemctl status node-exporter
 ### Требования к результату
  - Прикрепите к файлу README.md скриншот конфигурации из интерфейса Prometheus вкладки Status > Configuration
  - Прикрепите к файлу README.md скриншот из интерфейса Prometheus вкладки Status > Targets, чтобы было видно минимум два эндпоинта
-### Решение
 
+---
+### Решение
 Открываю на редактирование файл конфигурации prometheus.yml:
 ```
 sudo nano /etc/prometheus/prometheus.yml
@@ -176,27 +178,41 @@ scrape_configs:
 
 ```
 sudo systemctl restart prometheus
-sudo systemctlstatus prometheus
+sudo systemctl status prometheus
 ```
 
 ![targets](https://github.com/user-attachments/assets/ec4ce0b7-b071-425f-9ff8-d0964e2b1060)
 ![config](https://github.com/user-attachments/assets/39e57037-8bc9-4dd0-afc3-570f28839e35)
 
-
 ------
-
 # Дополнительные задания со звёздочкой*
 Эти задания дополнительные. Их можно не выполнять. Это не повлияет на зачёт. Вы можете их выполнить, если хотите глубже разобраться в материале.
 
+------
 ## Задание 4*
 Установите Grafana.
 
 ### Требования к результату
  Прикрепите к файлу README.md скриншот левого нижнего угла интерфейса, чтобы при наведении на иконку пользователя были видны ваши ФИО
 
+---
 ## Решение
-------
+На официальном сайте grafana подробно описана её установка
+```
+sudo apt install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.3.0_amd64.deb
+sudo dpkg -i grafana_11.3.0_amd64.deb
+```
+После установки, запускаю сервис grafana-server:
+```
+sudo systemctl enable grafana-server.service
+sudo systemctl start grafana-server.service
+sudo systemctl status grafana-server.service
+```
+![image](https://github.com/user-attachments/assets/05da8596-c89e-4c10-95e9-897e44628f6c)
 
+
+------
 ## Задание 5*
 Интегрируйте Grafana и Prometheus.
 
