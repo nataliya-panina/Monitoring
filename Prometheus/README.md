@@ -64,6 +64,11 @@ WantedBy=multi-user.target
 sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
+Здесь может возникнуть проблема с правами доступа к каталогу /var/lib/prometheus, чтобы её устранить, нужно поменять владельца папки на prometheus:prometheus
+
+```
+sudo chown prometheus:prometheus /var/lib/prometheus
+```
 ![image](https://github.com/user-attachments/assets/332a23f4-e580-470c-8fcd-97dd6d3c3d45)
 
 ## Задание 2
