@@ -1,4 +1,5 @@
 # Домашнее задание к занятию «Система мониторинга Prometheus»
+
 Это задание для самостоятельной отработки навыков и не предполагает обратной связи от преподавателя. Его выполнение не влияет на завершение модуля. Но мы рекомендуем его выполнить, чтобы закрепить полученные знания.
 
 Цели задания:
@@ -7,6 +8,7 @@
 - Научиться подключать Node Exporter к серверу Prometheus
 - Научиться устанавливать Grafana и интегрировать с Prometheus
 
+------
 ## Задание 1
 Установите Prometheus.
 
@@ -73,7 +75,8 @@ sudo systemctl status prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus/*
 ```
 ![image](https://github.com/user-attachments/assets/332a23f4-e580-470c-8fcd-97dd6d3c3d45)
----
+
+------
 ## Задание 2
 Установите Node Exporter.
 
@@ -135,6 +138,7 @@ sudo systemctl status node-exporter
 
 ![image](https://github.com/user-attachments/assets/50e9c87a-2be3-4f44-b85a-1f461a1ec802)
 
+------
 ## Задание 3
 Подключите Node Exporter к серверу Prometheus.
 
@@ -146,6 +150,41 @@ sudo systemctl status node-exporter
 ### Требования к результату
  - Прикрепите к файлу README.md скриншот конфигурации из интерфейса Prometheus вкладки Status > Configuration
  - Прикрепите к файлу README.md скриншот из интерфейса Prometheus вкладки Status > Targets, чтобы было видно минимум два эндпоинта
+### Решение
+
+Открываю на редактирование файл конфигурации prometheus.yml:
+```
+sudo nano /etc/prometheus/prometheus.yml
+```
+Добавляю "localhost:9100" в цели prometheus:
+```
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090", "localhost:9100"]
+```
+
+![image](https://github.com/user-attachments/assets/8db6bae9-ccd7-4108-a69a-72a19dadcbaf)
+
+
+```
+sudo systemctl restart prometheus
+sudo systemctlstatus prometheus
+```
+
+![targets](https://github.com/user-attachments/assets/ec4ce0b7-b071-425f-9ff8-d0964e2b1060)
+![config](https://github.com/user-attachments/assets/39e57037-8bc9-4dd0-afc3-570f28839e35)
+
+
+------
+
 # Дополнительные задания со звёздочкой*
 Эти задания дополнительные. Их можно не выполнять. Это не повлияет на зачёт. Вы можете их выполнить, если хотите глубже разобраться в материале.
 
@@ -156,6 +195,7 @@ sudo systemctl status node-exporter
  Прикрепите к файлу README.md скриншот левого нижнего угла интерфейса, чтобы при наведении на иконку пользователя были видны ваши ФИО
 
 ## Решение
+------
 
 ## Задание 5*
 Интегрируйте Grafana и Prometheus.
