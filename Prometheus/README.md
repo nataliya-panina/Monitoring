@@ -44,7 +44,7 @@ sudo /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --st
 --web.console.templates=/etc/prometheus/consoles/ --web.console.libraries=/etc/prometheus/console_libraries/
 ```
 В браузере открываю <IP_address>:9090
-![image](https://github.com/user-attachments/assets/9c85cdfe-08e8-4222-bb9a-41f08cfcaa2b)
+![image](https://github.com/user-attachments/assets/9c85cdfe-08e8-4222-bb9a-41f08cfcaa2b)  
 
 4. Создаю файл сервиса prometheus по пути /etc/systemd/system/prometheus.service
 ```
@@ -102,7 +102,8 @@ drwxr-x--- 33 moi moi     4096 oct.  31 12:19 ../
 -rw-r--r--  1 moi moi      463 juil. 14 13:57 NOTICE
  ./node_exporter
 ```
-![image](https://github.com/user-attachments/assets/e6a0e5da-b30b-4791-bf08-526336e9702f)
+![image](https://github.com/user-attachments/assets/e6a0e5da-b30b-4791-bf08-526336e9702f)  
+
 Создаю каталог для node_exporter, назначаю владельцем prometheus
 
 ```
@@ -128,7 +129,7 @@ WantedBy=multi-user.target
 После этого, запуск и проверка сервиса:
 
 ```
-sudo systemctl start node-exporter
+sudo systemctl enable --now node-exporter
 sudo systemctl status node-exporter
 ```
 
