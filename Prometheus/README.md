@@ -27,7 +27,7 @@ wget https://github.com/prometheus/prometheus/releases/download/v2.55.0/promethe
 tar xvfz prometheus-2.55.0.linux-amd64.tar.gz
 ll prometheus-2.55.0.linux-amd64.tar.gz
 ```
-2. Создаю каталоги для файлов prometheus
+2. Создаю каталоги для файлов prometheus и копирую в них файлы конфигурации:
 ```
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
