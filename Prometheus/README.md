@@ -50,11 +50,33 @@ sudo mv ./prometheus.yml /etc/prometheus
 sudo chown prometheus:prometheus /etc/prometheus /var/lib/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
 ```
-Запуск prometheus
+3. Запускаю prometheus
 ```
 sudo /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/ \
 --web.console.templates=/etc/prometheus/consoles/ --web.console.libraries=/etc/prometheus/console_libraries/
 ```
+4. Создаю файл сервиса prometheus по пути /etc/systemd/system/prometheus.service
+```
+[Unit]
+Description=Prometheus Service Netology Lesson 9.4 Panina Nataliya
+After=network.target
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+ExecStart=/usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml \
+--storage.tsdb.path=/var/lib/prometheus/ --web.console.templates=/etc/prometheus/consoles/ \
+--web.console.libraries=/etc/prometheus/console_libraries/
+ExecReload=/bin/kill -HUP $MAINPID Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+```
+После этого осталось только запустить prometheus как сервис:
+```
+sudo systemctl start prometheus
+sudo systemctl status prometheus
+```
+![image](https://github.com/user-attachments/assets/332a23f4-e580-470c-8fcd-97dd6d3c3d45)
 
 ## Задание 2
 Установите Node Exporter.
