@@ -35,14 +35,25 @@
 1.Создаю пользователя prometheus, скачиваю архив из github, распавовываю его
 ```
 sudo useradd --no-create-home --shell /bin/false prometheus
-wget https://github.com/prometheus/prometheus/releases/download/v2.55.0/prometheus-2.55.0.windows-arm64.tar.gz
-tar xvfz prometheus-2.55.0.windows-arm64.tar.gz
-cd prometheus-2.55.0.windows-arm64/
+wget https://github.com/prometheus/prometheus/releases/download/v2.55.0/prometheus-2.55.0.linux-amd64.tar.gz
+tar xvfz prometheus-2.55.0.linux-amd64.tar.gz
+ll prometheus-2.55.0.linux-amd64.tar.gz
 ```
 2. Создаю каталоги для файлов prometheus
 ```
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
+sudo mv prometheus promtool /usr/local/bin
+sudo cp -R ./console_libraries /etc/prometheus
+sudo cp -R ./consoles /etc/prometheus
+sudo mv ./prometheus.yml /etc/prometheus
+sudo chown prometheus:prometheus /etc/prometheus /var/lib/prometheus
+sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
+```
+Запуск prometheus
+```
+sudo /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus/ \
+--web.console.templates=/etc/prometheus/consoles/ --web.console.libraries=/etc/prometheus/console_libraries/
 ```
 
 ## Задание 2
