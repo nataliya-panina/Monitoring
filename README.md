@@ -25,7 +25,7 @@
 - Научиться подключать Node Exporter к серверу Prometheus
 - Научиться устанавливать Grafana и интегрировать с Prometheus
 
-[Система мониторинга Prometheus._ч.2](https://github.com/nataliya-panina/Monitoring/blob/main/Prometheus2/README.md)  
+[Система мониторинга Prometheus. ч.2](https://github.com/nataliya-panina/Monitoring/blob/main/Prometheus2/README.md)  
 Цели задания
 - Научитья настраивать оповещения в Prometheus
 - Научиться устанавливать Alertmanager и интегрировать его с Prometheus
