@@ -15,7 +15,7 @@
 - Научиться создавать Python-скрип, добавляться в него UserParameter и прикреплять к шаблону
 - Научиться создавать Vagrant-скрипты для Zabbix Agent  
 
-[Prometheus](https://github.com/nataliya-panina/Monitoring/blob/main/Prometheus/README.md) - Установка Prometheus и конфигурация его в качестве сервиса  
+[Система мониторинга Prometheus](https://github.com/nataliya-panina/Monitoring/blob/main/Prometheus/README.md) - Установка Prometheus и конфигурация его в качестве сервиса  
 Цели задания:
 - Научиться устанавливать Prometheus
 - Научиться устанавливать Node Exporter
