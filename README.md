@@ -1,5 +1,8 @@
 # Домашние задания к модулю "Мониторинг"
 [Обзор систем IT-мониторинга](https://github.com/nataliya-panina/Monitoring/blob/main/1/README.md)  
+Цели задания  
+- Научиться запускать мониторинг ИТ-системы через Yandex Monitoring
+- Научиться настраивать уведомления о событиях в процессе мониторинга через e-mail
 
 [Система мониторинга Zabbix](https://github.com/nataliya-panina/Monitoring/blob/main/zabbix1/README.md)  
 Цели задания  
