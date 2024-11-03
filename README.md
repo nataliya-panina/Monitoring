@@ -5,7 +5,7 @@
 - Научиться устанавливать Zabbix Server c веб-интерфейсом
 - Научиться устанавливать Zabbix Agent на хосты
 - Научиться устанавливать Zabbix Agent на компьютер и подключать его к серверу Zabbix  
-[Система мониторинга Zabbix. Часть 2](https://github.com/nataliya-panina/Monitoring/blob/main/zabbix2/README.md)
+[Система мониторинга Zabbix. Часть 2](https://github.com/nataliya-panina/Monitoring/blob/main/zabbix2/README.md)  
 Цели задания  
 - Научитья создавать свои шаблоны в Zabbix, добавлять в Zabbix хосты и связывать шаблон с хостами
 - Научиться составлять кастомный дашборд
