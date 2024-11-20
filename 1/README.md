@@ -35,9 +35,21 @@
 Нажмите на кнопку "Сохранить" в правом верхнем углу экрана  
 Задайте имя дашборда, если появится окно ввода имени дашборда  
 
+---
 ## Решение
 
+![image](https://github.com/user-attachments/assets/9317dc61-509a-4131-998c-44e4a6618d03)
+
+![image](https://github.com/user-attachments/assets/7479f1e8-ff1a-4d30-9255-a6cfd5c4bc8c)
+
+![image](https://github.com/user-attachments/assets/df1b5a9b-7be3-4038-ae41-76ca5ce3dcce)
+
+![image](https://github.com/user-attachments/assets/b7d1973b-521d-4232-9860-1d3c2d037bed)
+
+
+---
 ## Задание 2
 С помощью Yandex Monitoring сделайте 2 алерта на загрузку процессора: WARN и ALARM. Создайте уведомление по e-mail.  
 
+---
 ## Решение
